@@ -5,7 +5,7 @@
 
 This project was developed as a coding challenge for a position at [`Ebytr`](www.betrybe.com).
 
-The proposal requested an application based on MERN (https://www.mongodb.com/mern-stack) to help it's employees organizing their tasks consisting of:
+The proposal requested an application based on [MERN](https://www.mongodb.com/mern-stack) to help it's employees organizing their tasks consisting of:
 
 - Front-End in React;
 - Back-End in Node.js;
@@ -58,4 +58,4 @@ Copy project SSH `git@github.com:gcesconeto/taskManager.git`
 ## Contact
 
 * Guilherme Cesconeto
-* Github: `https://github.com/gcesconeto`
+* [`Github`](https://github.com/gcesconeto)
