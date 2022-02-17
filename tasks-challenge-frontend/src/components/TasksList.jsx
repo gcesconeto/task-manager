@@ -6,9 +6,10 @@ function TasksList() {
     const { tasks } = useContext(AppContext);
 
     const renderTasksList = () => tasks.map(
-        ({ task, status, createdAt }) => 
-        <TaskCard 
-            key={ task } 
+        ({ _id, task, status, createdAt }) => 
+        <TaskCard
+            id={ _id }
+            key={ _id } 
             task={ task } 
             status={ status } 
             createdAt={ createdAt }

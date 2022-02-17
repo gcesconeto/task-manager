@@ -1,20 +1,22 @@
 import React, { useContext } from 'react';
 import AppContext from '../context/AppContext';
 
-function CreateTask() {
-    const { setNewTask } = useContext(AppContext);
+const api = require('../services/api');
 
-    const handleSubmit = (event) => {
+function CreateTask() {
+    const { updateCounter, setUpdateCounter } = useContext(AppContext);
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        let value = event.target[0].value;
         const createdAt  = new Intl.DateTimeFormat('pt-br',
         { dateStyle: 'short', timeStyle: 'medium' }).format(new Date());
-        setNewTask({
-            task: value,
+        await api.postTask({
+            task: event.target[0].value,
             status: 'pending',
             createdAt,
-        })
-        value = '';
+        });
+        event.target[0].value = '';
+        setUpdateCounter(updateCounter + 1)
     };
 
     return (
