@@ -25,11 +25,9 @@ function TaskCard({ id, task, status, createdAt }) {
     };
 
     return (
-        <div>
-            <span>Task: </span>
-            <span>{ task }</span>
-            <span> Created at: </span>
-            <span>{ createdAt }</span>
+        <div className="task-card">
+            <span className="task-card-title">{ task }</span>
+            <span className="task-card-date">{ createdAt }</span>
             <form>
                 <select
                     id="status-select"
@@ -44,6 +42,7 @@ function TaskCard({ id, task, status, createdAt }) {
                 </select>
             </form>
             <button
+                className="delete"
                 type="button"
                 onClick={ handleClick }
             >

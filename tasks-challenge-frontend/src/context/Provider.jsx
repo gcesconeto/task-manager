@@ -16,30 +16,30 @@ function Provider({ children }) {
         updateCounter,
         setUpdateCounter,
     };
-    
-    // useEffect(() => {
-    //     const sortTasks = (tasks) => {
-    //         const { field, order } = sort;
-    //         if (order === 'asc') {
-    //             tasks = tasks.sort((a, b) => {
-    //             if (Number.isNaN(+a[field]) || Number.isNaN(+b[field])) {
-    //                 return a[field].localeCompare(b[field]);
-    //             }
-    //             return +a[field] - +b[field];
-    //             });
-    //         }
-    //         if (order === 'desc') {
-    //             tasks = tasks.sort((b, a) => {
-    //             if (Number.isNaN(+a[field]) || Number.isNaN(+b[field])) {
-    //                 return a[field].localeCompare(b[field]);
-    //             }
-    //             return +a[field] - +b[field];
-    //             });
-    //         }
-    //         return setTasks(tasks);
-    //     };
-    //     sortTasks(tasks);
-    // }, [sort, tasks]);
+
+    useEffect(() => {
+        const sortTasks = (tasks) => {
+            const { field, order } = sort;
+            if (order === 'asc') {
+                tasks = tasks.sort((a, b) => {
+                if (Number.isNaN(+a[field]) || Number.isNaN(+b[field])) {
+                    return a[field].localeCompare(b[field]);
+                }
+                return +a[field] - +b[field];
+                });
+            }
+            if (order === 'desc') {
+                tasks = tasks.sort((b, a) => {
+                if (Number.isNaN(+a[field]) || Number.isNaN(+b[field])) {
+                    return a[field].localeCompare(b[field]);
+                }
+                return +a[field] - +b[field];
+                });
+            }
+            return setTasks(tasks);
+        };
+        sortTasks(tasks);
+    }, [sort, tasks]);
 
     useEffect( () => {
         const getTasks = async () => {

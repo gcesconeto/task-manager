@@ -5,7 +5,7 @@ function Sorter() {
     const { sort, setSort } = useContext(AppContext);
 
     return (
-        <form>
+        <form className="header">
             <button
                 type="button"
                 value={ sort.order === 'asc' ? 'desc' : 'asc'}
@@ -15,12 +15,14 @@ function Sorter() {
             </button>
             <button
                 type="button"
+                disabled={ sort.field === 'task' ? true : false}
                 value="task"
                 onClick={ (event) => setSort({...sort, field: event.target.value}) }
             >
                 Alphabetically
             </button>
             <button
+                disabled={ sort.field === 'createdAt' ? true : false}
                 type="button"
                 value="createdAt"
                 onClick={ (event) => setSort({...sort, field: event.target.value}) }
@@ -29,6 +31,7 @@ function Sorter() {
             </button>
             <button
                 type="button"
+                disabled={ sort.field === 'status' ? true : false}
                 value="status"
                 onClick={ (event) => setSort({...sort, field: event.target.value}) }
             >

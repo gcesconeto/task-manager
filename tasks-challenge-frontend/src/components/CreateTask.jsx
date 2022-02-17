@@ -20,14 +20,14 @@ function CreateTask() {
     };
 
     return (
-            <form onSubmit={ handleSubmit }>
+            <form className="header" onSubmit={ handleSubmit }>
                 <input
                     placeholder="Type new task..."
                     id="newTask"
                     type="text"
                     name="newTask"
                 />
-                <button type="submit">Submit</button>
+                <button type="submit">Create</button>
             </form>
     );
 }

@@ -17,7 +17,7 @@ function TasksList() {
     );
 
     return (
-        <div>
+        <div className="task-list">
             { renderTasksList() }
         </div>);
 }
