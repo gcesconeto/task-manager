@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 
 const INITIAL_CONTEXT = {
-    tasks: [{ task: 'hello', status: 'pending', createdAt: 'World!'}],
-    sort: { field: 'creationDate', order: 'desc' },
+    tasks: [],
+    sort: {},
     newTask: {},
     updatedTask: {},
 };
