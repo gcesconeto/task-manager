@@ -25,11 +25,11 @@ Pre-requisites:
 - mongoDB
 - NPM
 
-Copy project SSH `git@github.com:gcesconeto/taskManager.git`
+Copy project SSH `git@github.com:gcesconeto/task-manager.git`
 
 * Open a terminal window and input the following commands in order:
 
-  * `git clone git@github.com:gcesconeto/taskManager.git`
+  * `git clone git@github.com:gcesconeto/task-manager.git`
   * `cd taskManager`
   * `npm install`
   * `cd tasks-challenge-backend`
