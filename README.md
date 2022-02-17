@@ -44,7 +44,7 @@ Copy project SSH `git@github.com:gcesconeto/taskManager.git`
 
 ## Using the app:
 
-* Access `http://localhost:3000/` on your browser
+* Access [`http://localhost:3000/`](http://localhost:3000/) on your browser
 
 
 
