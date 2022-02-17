@@ -20,7 +20,7 @@ function CreateTask() {
     };
 
     return (
-            <form className="header" onSubmit={ handleSubmit }>
+            <form onSubmit={ handleSubmit }>
                 <input
                     placeholder="Type new task..."
                     id="newTask"

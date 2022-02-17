@@ -1,14 +1,12 @@
 import Provider from './context/Provider';
 import TasksList from './components/TasksList';
-import CreateTask from './components/CreateTask';
-import Sorter from './components/Sorter';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
   return (
     <Provider>
-      <CreateTask />
-      <Sorter />
+      <Header />
       <TasksList />
     </Provider>
   );

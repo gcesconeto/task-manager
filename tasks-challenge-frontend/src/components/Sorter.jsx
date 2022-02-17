@@ -5,7 +5,7 @@ function Sorter() {
     const { sort, setSort } = useContext(AppContext);
 
     return (
-        <form className="header">
+        <form>
             <button
                 type="button"
                 value={ sort.order === 'asc' ? 'desc' : 'asc'}
