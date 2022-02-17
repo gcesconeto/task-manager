@@ -1,65 +1,42 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { number, string } from 'prop-types';
-import moment from 'moment';
-import {
-  OrderCardContainer,
-} from '../styles/orderCard';
-import StatusBar from '../styles/statusBar';
+import React, { useContext } from 'react';
+import AppContext from '../context/AppContext';
+import { string } from 'prop-types';
 
-function OrderCard({
-  entity,
-  id,
-  address,
-  status,
-  date,
-  totalPrice,
-}) {
-  const navigate = useNavigate();
+function TaskCard({ task, status, createdAt }) {
+  const { setUpdatedTask } = useContext(AppContext);
+
+  const statusList = ['pending', 'in progress', 'done'];
 
   return (
-    <OrderCardContainer onClick={ () => navigate(`/${entity}/orders/${id}`) }>
-      <span>Pedido</span>
-      <span data-testid={ `${entity}_orders__element-order-id-${id}` }>{ id }</span>
-      <StatusBar
-        data-testid={ `${entity}_orders__element-delivery-status-${id}` }
-        status={ status }
-        width="100%"
-      >
-        { status }
-      </StatusBar>
-      <span
-        data-testid={ `${entity}_orders__element-order-date-${id}` }
-      >
-        { moment(date).format('DD/MM/YYYY') }
-      </span>
-      <span
-        data-testid={ `${entity}_orders__element-card-price-${id}` }
-      >
-        { `R$ ${totalPrice.toFixed(2).replace('.', ',')}` }
-      </span>
-      { address && (
-        <span
-          data-testid={ `${entity}_orders__element-card-address-${id}` }
-        >
-          { address }
-        </span>
-      ) }
-    </OrderCardContainer>
+      <div>
+        <span>{ task }</span>
+        <span>{ createdAt }</span>
+        <form>
+            <select
+                id="status-select"
+                value={ status }
+                onChange={ (event) => setUpdatedTask({
+                    status: event.target.value,
+                    task,
+                    createdAt,
+                }) 
+                }
+            >
+                {
+                    statusList.map((option, index) => (
+                        <option key={ index } value={ option }>{option}</option>
+                        ))
+                }
+            </select>
+        </form>
+      </div>
   );
 }
 
-OrderCard.propTypes = {
-  entity: string.isRequired,
-  id: number.isRequired,
+TaskCard.propTypes = {
+  task: string.isRequired,
   status: string.isRequired,
-  date: string.isRequired,
-  totalPrice: number.isRequired,
-  address: string,
+  createdAt: string.isRequired,
 };
 
-OrderCard.defaultProps = {
-  address: '',
-};
-
-export default OrderCard;
+export default TaskCard;
