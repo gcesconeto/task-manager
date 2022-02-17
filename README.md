@@ -2,11 +2,10 @@
 
 ## Context
 
----
 
 This project was developed as a coding challenge for a position at [`Ebytr`](www.betrybe.com).
 
-The proposal requested an application based on MERN (https://www.mongodb.com/mern-stack) to help it's empĺoyees organizing their tasks consisting of:
+The proposal requested an application based on MERN (https://www.mongodb.com/mern-stack) to help it's employees organizing their tasks consisting of:
 
 - Front-End in React;
 - Back-End in Node.js;
@@ -18,7 +17,6 @@ Features:
 - Have task statuses as 'pending', 'in progress' or 'done';
 - Sort tasks based on date, status or alphabetically;
 
----
 
 
 ## Installation
@@ -42,23 +40,20 @@ Copy project SSH `git@github.com:gcesconeto/taskManager.git`
   * `npm install`
   * `npm start`
 
----
 
 
 ## Using the app:
 
 * Access `http://localhost:3000/` on your browser
 
----
 
 
 ## Next steps
 
-* Implement unitary and integration tests;
+* Implement unit and integration tests;
 * Improve the app security by integrating JWT;
 * Heroku Deploy;
 
----
 
 ## Contact
 
