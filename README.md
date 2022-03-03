@@ -3,7 +3,7 @@
 ## Context
 
 
-This project was developed as a coding challenge for a position at [`Ebytr`](www.betrybe.com).
+This project was developed as a coding challenge for a position at [Ebytr](www.betrybe.com).
 
 The proposal requested an application based on [MERN](https://www.mongodb.com/mern-stack) to help it's employees organize their tasks, consisting of:
 
